@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EduMax - Add announcement</title>
+    <meta name="author" content="B5675936">
+    <meta name="description" content="Create an announcement for EduMax members">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <img src="../images/EduMax_logo.png" alt="EduMax logo" class="img-fluid">
+                </div>
+                <div class="col">
+                    <h1 class="header">EduMax</h1>
+                </div>
+                <div class="col text-end">
+                    <a class="btn btn-primary m-2" href="./placeholder.html" role="button">Log out</a>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg bg-dark p-2" data-bs-theme="dark" aria-label="Admin navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar" aria-controls="adminNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="adminNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./placeholder.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./placeholder.html">Modules</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./placeholder.html">Learning Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./placeholder.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./form.html">Announcements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./placeholder.html">Members</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="row mt-2 ms-0">
+            <div class="col">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./placeholder.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="./placeholder.html">Announcements</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add announcement</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <main>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <section>
+                        <h2>Add announcement</h2>
+                        <p>Enter the announcement details and choose when the email should be sent.</p>
+
+                        <form class="announcement mb-4" method="post" enctype="multipart/form-data" action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php">
+                            <input type="hidden" name="item_ID" value="30001000-5000-654321fedcba">
+
+                            <div class="mb-3">
+                                <label class="form-label" for="subject">Subject line</label>
+                                <input class="form-control" type="text" id="subject" name="subject" value="Exams revision timetable">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="content">Content</label>
+                                <textarea class="form-control" id="content" name="content" rows="5">The revision timetable is now available.</textarea>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label class="form-label" for="sender-name">Sender's name</label>
+                                    <input class="form-control" type="text" id="sender-name" name="sender_name" value="Safa Smith">
+                                </div>
+
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label class="form-label" for="sender-role">Sender's role</label>
+                                    <select class="form-select" id="sender-role" name="sender_role">
+                                        <option value="module lead" selected>module lead</option>
+                                        <option value="administrator">administrator</option>
+                                        <option value="module assistant">module assistant</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="attachment">Attachment (optional)</label>
+                                <input class="form-control" type="file" id="attachment" name="attachment">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label class="form-label" for="send-date">Date to send</label>
+                                    <input class="form-control" type="date" id="send-date" name="send_date" value="2026-10-15">
+                                </div>
+
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label class="form-label" for="send-time">Time to send</label>
+                                    <input class="form-control" type="time" id="send-time" name="send_time" value="09:00">
+                                </div>
+
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label class="form-label" for="priority">Priority</label>
+                                    <select class="form-select" id="priority" name="priority">
+                                        <option value="High" selected>High</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Low">Low</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary" type="submit">Add announcement</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="row me-0">
+                <div class="col">
+                    <nav class="nav" aria-label="Footer navigation">
+                        <a class="nav-link" href="./placeholder.html">Privacy</a>
+                        <a class="nav-link" href="./placeholder.html">About Us</a>
+                        <a class="nav-link" href="./placeholder.html">Support</a>
+                    </nav>
+                </div>
+                <div class="col text-end">
+                    <p>&copy; EduMax 2026</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
