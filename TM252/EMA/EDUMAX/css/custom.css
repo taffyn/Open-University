@@ -1,0 +1,39 @@
+.header {
+    background-color: #3c9fc3;
+    color: white;
+}
+
+h1.header {
+    font-size: 9vw;
+}
+
+/* Changed the colour of headings so it meets the minimum contrast */
+h2, h3, h4 {
+    color: #005a8d;
+}
+
+form.register {
+    border: 1px solid #3c9fc3;
+    background-color: lightgrey;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Make the entire resource block a clear, structured clickable area */
+.resource-link {
+    padding-bottom: 8px; /* Provides spacing to improve readability and clickable area */
+    border: 1px solid transparent; /* transprent boundary, stops object moving on hover*/
+    display: flex;     /* Ensures image and text are vertically aligned and centred, improving visual clarity and consistency for all users */
+    flex-direction: column;   
+    align-items: center;     
+    text-decoration: none;    /* Removes underline from link */
+}
+
+.resource-link:hover {
+    border: 1px solid #005a8d;  /* Colour change on hover gives feedback that the element is interactive, improving usability for mouse users */
+}
